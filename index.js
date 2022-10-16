@@ -24,16 +24,21 @@ app.get ('/', (req, res) => {
     res.send ("Hello World!!")
 })
 
-const courses = [
+const num = [
     {id: 1, number1: num1},
     {id: 2, number2: num2},
     {id: 3, Sum: num1+num2}
 ]
 app.get ('/api/numbers', (req, res) => {
-    res.send (courses)
+    res.send (num)
 })
 app.get ('/api/numbers/sum', (req, res) => {
-    res.send (courses[2])
+    res.send (num[2])
+})
+app.get ('/api/numbers/:id', (req, res) => {
+    const number = num.find (c => c.id === parseInt (req.params.id))
+    if (!number) res.status(404).send('The number with the gived ID is not present')
+    res.send (number)
 })
 
 app.listen (PORT, () => {
