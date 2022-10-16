@@ -2,7 +2,7 @@
 
 How to test the functioning of the code?
 
-Start the local server and then go to http://localhost:3000/api/numbers to get the list of the number 1, number and it's respective sum. 
+Start the local server and then go to http://localhost:3000/api/numbers to get the list of the number 1, number 2 and it's respective sum. 
 
 Go to http://localhost:3000/api/numbers/sum to just find the sum 
 &
